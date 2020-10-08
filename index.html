@@ -30,10 +30,14 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class= "fa fa-address-card fa-lg"></span> Contact</a></li>
                   </ul> 
                   <span class = "navbar-text">
-                       <a data-toggle="modal" data-target="#loginModal">
+                       <!--  <a data-toggle="modal" data-target="#loginModal">
                              <span class = "fa fa-sign-in"></span>
                              Login
-                       </a>
+                       </a>   -->
+                       <a id = "logintab">
+                           <span class = "fa fa-sign-in"></span>
+                           Login
+                        </a>
                   </span>
               </div>           
         </div>
@@ -172,17 +176,18 @@
                        data-placement="bottom"> 
                        Reserve Table
                     </a>  -->
-
+                    <!--
                     <a role = "button" class = "btn btn-block nav-link btn-warning" 
-                        data-toggle="modal" data-target="#ReseveTable">
-                              
+                        data-toggle="modal" data-target="#ReseveTable">   
                        Reserve Table
-                    </a>
+                    </a> -->
                    <!--  <a data-toggle="modal" data-target="#loginModal">
                         <span class = "fa fa-sign-in"></span>
                         Login
                      </a>  -->
-
+                    <a role = "button" class = "btn btn-block nav-link btn-warning" 
+                        id="TableButton">   Reserve Table
+                    </a>
                 </div>
             </div>
         </div>
@@ -432,6 +437,12 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+            $("#TableButton").click(function(){
+                $("#ReseveTable").modal('show');
+            });
+            $("#logintab").click(function(){
+                $("#loginModal").modal('show');
             });
         });
     </script>
